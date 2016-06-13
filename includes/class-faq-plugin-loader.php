@@ -14,9 +14,9 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @author     Your Name <marchalyoan@gmail.com>
+ * @author     Yoan Marchal <marchalyoan@gmail.com>
  */
-class partenaires_plugin_Loader
+class faq_plugin_Loader
 {
     /**
      * The array of actions registered with WordPress.

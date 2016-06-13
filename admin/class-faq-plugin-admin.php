@@ -13,9 +13,9 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @author     Your Name <marchalyoan@gmail.com>
+ * @author     Yoan Marchal <marchalyoan@gmail.com>
  */
-class partenaires_plugin_Admin
+class faq_plugin_Admin
 {
     /**
          * The ID of this plugin.
@@ -24,7 +24,7 @@ class partenaires_plugin_Admin
          *
          * @var string The ID of this plugin.
          */
-        private $partenaires_plugin;
+        private $faq_plugin;
 
         /**
          * The version of this plugin.
@@ -40,7 +40,7 @@ class partenaires_plugin_Admin
           *
           * @since    1.0.0
           *
-          * @param      string    $partenaires_plugin       The name of this plugin.
+          * @param      string    $faq_plugin       The name of this plugin.
           * @param      string    $version    The version of this plugin.
           */
 
@@ -49,11 +49,11 @@ class partenaires_plugin_Admin
           */
          private $options;
 
-    public function __construct($partenaires_plugin, $version)
+    public function __construct($faq_plugin, $version)
     {
-        $this->partenaires_plugin = $partenaires_plugin;
+        $this->faq_plugin = $faq_plugin;
         $this->version = $version;
-        add_action('init', [$this, 'init_cpt_partenaires']);
+        add_action('init', [$this, 'init_cpt_faq']);
     }
 
         /**
@@ -68,15 +68,15 @@ class partenaires_plugin_Admin
              * This function is provided for demonstration purposes only.
              *
              * An instance of this class should be passed to the run() function
-             * defined in partenaires_plugin_Loader as all of the hooks are defined
+             * defined in faq_plugin_Loader as all of the hooks are defined
              * in that particular class.
              *
-             * The partenaires_plugin_Loader will then create the relationship
+             * The faq_plugin_Loader will then create the relationship
              * between the defined hooks and the functions defined in this
              * class.
              */
 
-            wp_enqueue_style($this->partenaires_plugin, plugin_dir_url(__FILE__).'css/partenaires-plugin-admin.css', [], $this->version, 'all');
+            wp_enqueue_style($this->faq_plugin, plugin_dir_url(__FILE__).'css/faq-plugin-admin.css', [], $this->version, 'all');
         }
 
         /**
@@ -91,38 +91,38 @@ class partenaires_plugin_Admin
              * This function is provided for demonstration purposes only.
              *
              * An instance of this class should be passed to the run() function
-             * defined in partenaires_plugin_Loader as all of the hooks are defined
+             * defined in faq_plugin_Loader as all of the hooks are defined
              * in that particular class.
              *
-             * The partenaires_plugin_Loader will then create the relationship
+             * The faq_plugin_Loader will then create the relationship
              * between the defined hooks and the functions defined in this
              * class.
              */
 
-            wp_enqueue_script($this->partenaires_plugin, plugin_dir_url(__FILE__).'js/partenaires-plugin-admin.js', ['jquery'], $this->version, false);
+            wp_enqueue_script($this->faq_plugin, plugin_dir_url(__FILE__).'js/faq-plugin-admin.js', ['jquery'], $this->version, false);
         }
 
-    public function init_cpt_partenaires()
+    public function init_cpt_faq()
     {
         $labels = [
-        'name'                => _x('partenaires', 'Post Type General Name', 'partenaires-plugin'),
-        'singular_name'       => _x('Partenaire', 'Post Type Singular Name', 'partenaires-plugin'),
-        'menu_name'           => __('Partenaire', 'partenaires-plugin'),
-        'parent_item_colon'   => __('Parent Partenaire:', 'partenaires-plugin'),
-        'all_items'           => __('All partenaires', 'partenaires-plugin'),
-        'view_item'           => __('View Partenaire', 'partenaires-plugin'),
-        'add_new_item'        => __('Add New Partenaire', 'partenaires-plugin'),
-        'add_new'             => __('New Partenaire', 'partenaires-plugin'),
-        'edit_item'           => __('Edit Partenaire', 'partenaires-plugin'),
-        'update_item'         => __('Update Partenaire', 'partenaires-plugin'),
-        'search_items'        => __('Search partenaires', 'partenaires-plugin'),
-        'not_found'           => __('No partenaires found', 'partenaires-plugin'),
-        'not_found_in_trash'  => __('No partenaires found in Trash', 'partenaires-plugin'),
+        'name'                => _x('faq', 'Post Type General Name', 'faq-plugin'),
+        'singular_name'       => _x('Question', 'Post Type Singular Name', 'faq-plugin'),
+        'menu_name'           => __('Question', 'faq-plugin'),
+        'parent_item_colon'   => __('Parent Question:', 'faq-plugin'),
+        'all_items'           => __('All faq', 'faq-plugin'),
+        'view_item'           => __('View Question', 'faq-plugin'),
+        'add_new_item'        => __('Add New Question', 'faq-plugin'),
+        'add_new'             => __('New Question', 'faq-plugin'),
+        'edit_item'           => __('Edit Question', 'faq-plugin'),
+        'update_item'         => __('Update Question', 'faq-plugin'),
+        'search_items'        => __('Search faq', 'faq-plugin'),
+        'not_found'           => __('No faq found', 'faq-plugin'),
+        'not_found_in_trash'  => __('No faq found in Trash', 'faq-plugin'),
     ];
 
         $args = [
-        'label'               => __('partenaires', 'partenaires-plugin'),
-        'description'         => __('partenaires', 'partenaires-plugin'),
+        'label'               => __('faq', 'faq-plugin'),
+        'description'         => __('faq', 'faq-plugin'),
         'labels'              => $labels,
         'supports'            => ['title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields'],
         'taxonomies'          => ['category', 'post_tag'],
@@ -133,7 +133,7 @@ class partenaires_plugin_Admin
         'show_in_nav_menus'   => false,
         'show_in_admin_bar'   => true,
         'menu_position'       => 20,
-        'menu_icon'           => 'dashicons-share',
+        'menu_icon'           => 'dashicons-megaphone',
         'can_export'          => false,
         'has_archive'         => false,
         'exclude_from_search' => true,
@@ -141,6 +141,6 @@ class partenaires_plugin_Admin
         'capability_type'     => 'post',
     ];
 
-        register_post_type('partenaires', $args);
+        register_post_type('faq', $args);
     }
 }

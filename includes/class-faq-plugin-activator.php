@@ -14,9 +14,9 @@
  *
  * @since      1.0.0
  *
- * @author     Your Name <marchalyoan@gmail.com>
+ * @author     Yoan Marchal <marchalyoan@gmail.com>
  */
-class partenaires_plugin_Activator
+class faq_plugin_Activator
 {
     /**
      * Short Description. (use period).
