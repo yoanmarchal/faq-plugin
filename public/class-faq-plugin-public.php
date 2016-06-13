@@ -41,7 +41,7 @@ class faq_plugin_Public
      * @since    1.0.0
      *
      * @param string $faq_plugin The name of the plugin.
-     * @param string $version            The version of this plugin.
+     * @param string $version    The version of this plugin.
      */
     public function __construct($faq_plugin, $version)
     {
