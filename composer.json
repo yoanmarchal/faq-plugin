@@ -1,0 +1,14 @@
+{
+    "name": "yoanmarchal/faq-plugin",
+    "description": "Add ctp faq",
+    "type": "wordpress-plugin",
+    "license": "GLPv2",
+    "authors": [
+        {
+            "name": "Yoan marchal",
+            "email": "marchalyoan@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
