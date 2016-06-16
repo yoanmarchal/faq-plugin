@@ -1,5 +1,5 @@
 {
-    "name": "yoanmarchal/faq-plugin",
+    "name": "yoanmarchal/faq-cpt-plugin",
     "description": "Add ctp faq",
     "type": "wordpress-plugin",
     "license": "GLPv2",
