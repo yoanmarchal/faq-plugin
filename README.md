@@ -1,4 +1,4 @@
-## Faq plugin ##
+## Faq cpt plugin ##
  - Contributors: (this should be a list of wordpress.org userid's)
  - Donate link: https://pledgie.com/campaigns/31846
  - Tags: faq, wordpress,plugin

@@ -12,10 +12,10 @@
  * @since             1.0.0
  *
  * @wordpress-plugin
- * Plugin Name:       FAQ Plugin
+ * Plugin Name:       FAQ cpt Plugin
  * Plugin URI:        http://example.com/faq-plugin-uri/
  * Description:       add faq ctp
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Yoan marchal
  * Author URI:        http://yoanmarchal.com/
  * License:           GPL-2.0+
