@@ -135,7 +135,7 @@ class faq_plugin_Admin
         'menu_position'       => 20,
         'menu_icon'           => 'dashicons-megaphone',
         'can_export'          => false,
-        'has_archive'         => false,
+        'has_archive'         => 'faqs',
         'exclude_from_search' => true,
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
