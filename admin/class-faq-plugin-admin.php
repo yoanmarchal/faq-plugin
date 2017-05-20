@@ -56,52 +56,6 @@ class faq_plugin_Admin
         add_action('init', [$this, 'init_cpt_faq']);
     }
 
-        /**
-         * Register the stylesheets for the admin area.
-         *
-         * @since    1.0.0
-         */
-        public function enqueue_styles()
-        {
-
-            /*
-             * This function is provided for demonstration purposes only.
-             *
-             * An instance of this class should be passed to the run() function
-             * defined in faq_plugin_Loader as all of the hooks are defined
-             * in that particular class.
-             *
-             * The faq_plugin_Loader will then create the relationship
-             * between the defined hooks and the functions defined in this
-             * class.
-             */
-
-            wp_enqueue_style($this->faq_plugin, plugin_dir_url(__FILE__).'css/faq-plugin-admin.css', [], $this->version, 'all');
-        }
-
-        /**
-         * Register the JavaScript for the admin area.
-         *
-         * @since    1.0.0
-         */
-        public function enqueue_scripts()
-        {
-
-            /*
-             * This function is provided for demonstration purposes only.
-             *
-             * An instance of this class should be passed to the run() function
-             * defined in faq_plugin_Loader as all of the hooks are defined
-             * in that particular class.
-             *
-             * The faq_plugin_Loader will then create the relationship
-             * between the defined hooks and the functions defined in this
-             * class.
-             */
-
-            wp_enqueue_script($this->faq_plugin, plugin_dir_url(__FILE__).'js/faq-plugin-admin.js', ['jquery'], $this->version, false);
-        }
-
     public function init_cpt_faq()
     {
         $labels = [

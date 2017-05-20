@@ -141,9 +141,6 @@ class faq_plugin
     private function define_admin_hooks()
     {
         $plugin_admin = new faq_plugin_Admin($this->get_faq_plugin(), $this->get_version());
-
-        $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
-        $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
     }
 
     /**
@@ -155,9 +152,6 @@ class faq_plugin
     private function define_public_hooks()
     {
         $plugin_public = new faq_plugin_Public($this->get_faq_plugin(), $this->get_version());
-
-        $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
-        $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
     }
 
     /**
