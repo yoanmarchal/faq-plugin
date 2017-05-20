@@ -46,7 +46,7 @@ function activate_faq_plugin()
 function deactivate_faq_plugin()
 {
     require_once plugin_dir_path(__FILE__).'includes/class-faq-plugin-deactivator.php';
-    faq_plugin_Deactivator::deactivate();
+    Faq_Deactivator::deactivate();
 }
 
 register_activation_hook(__FILE__, 'activate_faq_plugin');
