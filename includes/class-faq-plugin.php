@@ -140,7 +140,7 @@ class faq_plugin
      */
     private function define_admin_hooks()
     {
-        $plugin_admin = new faq_plugin_Admin($this->get_faq_plugin(), $this->get_version());
+        new faq_plugin_Admin($this->get_faq_plugin(), $this->get_version());
     }
 
     /**
@@ -151,7 +151,7 @@ class faq_plugin
      */
     private function define_public_hooks()
     {
-        $plugin_public = new faq_plugin_Public($this->get_faq_plugin(), $this->get_version());
+        new faq_plugin_Public($this->get_faq_plugin(), $this->get_version());
     }
 
     /**
